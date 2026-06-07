@@ -1,0 +1,53 @@
+{
+  "name": "GKagent",
+  "version": "1.0.0",
+  "author": "GKagent",
+  "description": "浙江省普通类高考志愿填报智能推荐 Agent，生成冲稳保 Excel 方案",
+  "triggers": [
+    "高考志愿",
+    "志愿填报",
+    "选学校",
+    "选专业",
+    "冲稳保",
+    "院校推荐",
+    "分数选校",
+    "浙江高考",
+    "GKagent",
+    "gaokao",
+    "80个志愿"
+  ],
+  "database": {
+    "type": "sqlite",
+    "path": "assets/gk_data.db"
+  },
+  "province": "浙江",
+  "category": "普通类",
+  "max_volunteers": 80,
+  "defaults": {
+    "label_quota": {
+      "rush": 20,
+      "stable": 40,
+      "safe": 20
+    },
+    "rank_ratio": {
+      "rush_min": 0.7,
+      "rush_max": 0.9,
+      "stable_min": 0.9,
+      "stable_max": 1.1,
+      "safe_min": 1.1,
+      "safe_max": 1.4
+    }
+  },
+  "web_sources": [
+    {
+      "name": "浙江省教育考试院",
+      "url": "https://www.zjzs.net",
+      "use_for": ["招生政策", "分数线", "志愿填报规则", "一分一段表"]
+    },
+    {
+      "name": "教育部阳光高考平台",
+      "url": "https://gaokao.chsi.com.cn",
+      "use_for": ["院校信息", "专业目录", "招生章程"]
+    }
+  ]
+}
