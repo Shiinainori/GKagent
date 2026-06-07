@@ -1,5 +1,6 @@
 # GKagent
 帮助浙江省普通类高考学生准备的志愿填报skill，这里是样例，具体agent在coze
+
   GKagent/
   ├── SKILL.md                  # 主技能定义（含完整工作流）
   ├── config.json               # 技能配置
